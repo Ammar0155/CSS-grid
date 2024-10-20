@@ -1,0 +1,431 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arvo", serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "phone phone rotary rotary"
+    "phone phone rotary rotary"
+    "keyboard space space iCloud"
+    "keyboard space space iCloud"
+    "games experience experience iCloud"
+    "games experience experience iCloud"
+    "twitter expe vision vision";
+}
+/* stat phone */
+.phone {
+  grid-area: phone;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 4%;
+  padding-left: 4%;
+}
+.phone .phone-qoute {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.phone .phone-qoute div:first-child,
+.rotary .rotary-text div,
+.space .space-left div {
+  align-self: flex-start;
+  color: #9fa3a7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.phone .phone-qoute h3 {
+  font-size: 22px;
+  color: #333;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.phone .phone-qoute div:last-child {
+  color: #9fa3a7;
+}
+.phone .phonee {
+  margin-top: 40px;
+  width: 249px;
+}
+/* end phone */
+/* start rotart */
+.rotary {
+  grid-area: rotary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f7f8f9;
+  text-align: center;
+}
+.rotary .rotary-text {
+  max-width: 550px;
+  margin: auto;
+}
+.rotary .rotary-text div {
+  align-self: center;
+}
+.rotary .rotary-text a {
+  color: #27b9c2;
+  font-size: 14px;
+  font-weight: 400;
+}
+.rotary h1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #333;
+  margin: 20px 0px;
+}
+/* end rotart */
+
+.space {
+  grid-area: space;
+  display: flex;
+  justify-content: space-around;
+}
+.space .space-left {
+  width: 50%;
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.space .space-left h3 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.space .space-left img {
+  width: 250%;
+  max-width: none;
+  position: relative;
+  left: -160%;
+  z-index: -1;
+}
+.space .space-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.space .space-right p {
+  color: #9fa3a7;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.space .space-right > a.blue {
+  color: #27b9c2;
+}
+/* start keybord */
+.keyboard {
+  grid-area: keyboard;
+  background-color: #f05638;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.keyboard h2 {
+  color: #fffbfb;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  width: 80%;
+  text-align: center;
+}
+.keyboard a,
+.space .space-right a {
+  text-decoration: none;
+  color: #ffc80a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.space .space-right a i,
+.keyboard a i {
+  font-size: 8px;
+  font-weight: bolder;
+}
+/* end keybord */
+/* start cloud */
+.iCloud {
+  grid-area: iCloud;
+  display: flex;
+  flex-direction: column;
+  background-color: #8f76bc;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 5% 70px;
+  gap: 20px;
+  overflow: hidden;
+}
+.iCloud h2 {
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.iCloud .text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  width: 70%;
+  max-width: 290px;
+}
+.iCloud a.button {
+  color: #000000;
+  background-color: #ffc80a;
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: 2.4px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.iCloud .cloud-circle {
+  background-color: #8166b0;
+  width: 373px;
+  height: 373px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.iCloud .cloud-circle div:first-child {
+  background-color: #8b72b6;
+  color: white;
+  font-size: 10px;
+  line-height: 23px;
+  letter-spacing: 2.4px;
+  font-weight: 700;
+  padding: 0px 10px;
+  border-radius: 50px;
+}
+.iCloud .cloud-circle div:first-child i {
+  color: #ffc80a;
+}
+.iCloud .cloud-circle div:last-child {
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.iCloud .cloud-circle img {
+  width: 239px;
+  margin: 20px 0px;
+}
+/* end cloud */
+
+/* experience start */
+.experience {
+  grid-area: experience;
+  position: relative;
+  background-image: url("../Grid masterclass/UX.png");
+  background-color: #93b6b7;
+
+  background-position: 50% 100%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+
+  padding-top: 44px;
+}
+.experience .minicaps {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  background-color: #fa684f;
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.experience h2 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  max-width: 280px;
+  margin: auto;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  text-align: center;
+}
+.experience img {
+  position: absolute;
+  left: -7%;
+  bottom: 0;
+  width: 90%;
+}
+/* experience end */
+
+/* games start */
+.games {
+  grid-area: games;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.games img {
+  width: 248px;
+  position: relative;
+  left: -7%;
+}
+.games h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  width: 50%;
+  text-align: center;
+  font-family: "Arvo", serif;
+  color: #333333;
+}
+.games a {
+  text-decoration: none;
+  color: #27b9c2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+.games a i {
+  font-size: 8px;
+  font-weight: bolder;
+}
+
+/* games end */
+.twitter {
+  grid-area: twitter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #38d5f4;
+  color: #fff;
+  overflow: hidden;
+  height: 192.5px;
+}
+.twitter .twitter-container {
+  display: flex;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  padding-right: 34px;
+  padding-left: 34px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #35cfed;
+  text-align: center;
+}
+.twitter .twitter-container img {
+  width: 43.5px;
+}
+.twitter .twitter-container h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+}
+.expe {
+  grid-area: expe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 192.5px;
+}
+.expe .minicaps2 {
+  position: static;
+  background-color: #7bc424;
+  color: #fff;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.expe h3 {
+  width: 70%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #333333;
+}
+.vision {
+  grid-area: vision;
+  display: flex;
+  overflow: hidden;
+  padding-right: 5%;
+  padding-left: 5%;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2c2c;
+  color: #fff;
+  height: 192.5px;
+}
+.vision img {
+  position: relative;
+  left: -15%;
+  width: 271px;
+}
+
+.vision h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  width: 34%;
+}

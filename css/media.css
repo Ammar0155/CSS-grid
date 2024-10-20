@@ -1,0 +1,48 @@
+@media (max-width: 1400px) {
+}
+@media (max-width: 1200px) {
+}
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 25%;
+    grid-template-rows: auto 1fr 1fr 1fr auto auto auto auto;
+    grid-template-areas:
+      "rotary rotary rotary rotary"
+      "phone phone phone phone"
+      "keyboard keyboard games games"
+      "space space space space"
+      "twitter twitter iCloud iCloud"
+      "experience experience iCloud iCloud"
+      "expe expe expe expe"
+      "vision vision vision vision";
+  }
+  .twitter {
+    height: auto;
+  }
+
+  .rotary {
+    padding: 40px;
+  }
+  .rotary .rotary-text {
+    max-width: 100%;
+  }
+  .iCloud {
+    padding: 30px 5% 70px;
+  }
+}
+@media (max-width: 479px) {
+  .container {
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+      "rotary rotary rotary rotary"
+      "phone phone phone phone"
+      "keyboard keyboard keyboard keyboard"
+      "games games games games"
+      "space space space space"
+      "twitter twitter twitter twitter"
+      "experience experience experience experience"
+      "iCloud iCloud iCloud iCloud"
+      "expe expe expe expe"
+      "vision vision vision vision";
+  }
+}
