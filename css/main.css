@@ -303,7 +303,7 @@ img {
 /* games start */
 .games {
   grid-area: games;
-
+  background-color: #f2f4fa;
   display: flex;
   align-items: center;
   justify-content: center;
